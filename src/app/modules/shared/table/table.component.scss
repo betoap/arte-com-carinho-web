@@ -1,0 +1,20 @@
+@import '../../../../assets/styles/tools/__all';
+
+:host {
+
+  ::ng-deep {
+
+    .fields__content {
+      display: inline-block;
+    }
+
+  }
+
+  .custom-th {
+    width: 16%;
+  }
+
+  tr {
+    @include rem(height, 68px);
+  }
+}

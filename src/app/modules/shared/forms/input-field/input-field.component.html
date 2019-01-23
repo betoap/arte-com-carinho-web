@@ -1,0 +1,21 @@
+<div class="form-group"
+[ngClass]="{
+  'has-error': hasError
+}">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="{{icon}}"></i></span>
+      <input
+        class="form-control input-lg {{classeCss}}__input"
+        [maxlength]="maxlength"
+        [placeholder]="placeholder"
+        [type]="type"
+        [id]="id"
+        [name]="id"
+        [readonly]="!!isReadOnly"
+        [(ngModel)]="value"
+        [autocomplete]="autocomplete"
+        (focus)="setFocus($event)"
+      />
+    </div>
+    <acc-error-msg [control]="control" [label]="label" (evtHasError)="evtHasError($event)"></acc-error-msg>
+  </div>

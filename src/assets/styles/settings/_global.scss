@@ -1,0 +1,38 @@
+// *----------------------------------*\
+//  Settings > Global
+// *----------------------------------*/
+
+$global-transition:                   .4s !default;
+$enable-rounded:                      true !default;
+$enable-shadows:                      false !default;
+$enable-gradients:                    false !default;
+$enable-transitions:                  true !default;
+$fonte-padrao:                        roboto, 'Open Sans', sans-serif !default;
+$box-sizing:                          border-box !default;
+$animation-time-default:              .4s !default;
+$animation-mode-default:              both !default;
+$animation-name-default:              fadeout !default;
+$animation-delay-default:             s0 !default;
+$animation-transform-origin-default:  top center !default;
+
+//== Modals
+$modal-inner-padding:         20px;
+$modal-title-padding:         15px;
+$modal-content-bg:                             #fff;
+$modal-content-border-color:                   rgba(0,0,0,.2);
+$modal-content-fallback-border-color:          #999;
+$modal-backdrop-bg:           #000;
+$modal-backdrop-opacity:      .5;
+$modal-header-border-color:   #e5e5e5;
+$modal-footer-border-color:   $modal-header-border-color;
+$modal-lg:                    900px;
+$modal-md:                    600px;
+$modal-sm:                    300px;
+$zindex-navbar:            1000;
+$zindex-dropdown:          1000;
+$zindex-popover:           1010;
+$zindex-tooltip:           1030;
+$zindex-navbar-fixed:      1030;
+$zindex-modal-background:  1040;
+$zindex-modal:             1050;
+

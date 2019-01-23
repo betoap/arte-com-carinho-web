@@ -1,0 +1,102 @@
+@import '../tools/_all';
+
+#divMiniIcons {
+  @include rem(width, 415px);
+  @include rem(right, 10px);
+  @include rem(bottom, 180px);
+	position: fixed;
+	z-index: 9999;
+	float: right;
+
+  .cajita {
+    @include rem(padding, 4px, 6px);
+    @include rem(margin-top, 5px);
+    @include rem(margin-left, 4px);
+    @include rem(font-size, 17px);
+	  text-align: center;
+	  vertical-align: middle;
+	  color: #FFF;
+	  float: right;
+	  cursor: pointer;
+	  display: block;
+	  background-color: inherit;
+
+	  &:active {
+      @include rem(top, 1px);
+      @include rem(left, 1px);
+	    position:relative;
+    }
+  }
+}
+
+
+.notify {
+  @include rem(right, 10px);
+  @include rem(bottom, 10px);
+  @include rem(padding, 10px, 20px, 5px, 22px);
+  @include rem(width, 390px);
+  @include rem(height, 150px);
+  @include rem(border-radius, 8px);
+  position: fixed;
+  background-color: rgba(41, 40, 46, 1);
+  color: $color-white;
+  z-index: 99999;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  border-left: 5px solid rgba(0,0,0,.15);
+  overflow: hidden;
+
+  .botClose {
+    @include rem(height, 16px);
+    @include rem(width, 15px);
+    @include rem(font-size, 18px);
+    @include rem(right, 20px);
+    @include rem(top, 15px);
+    position: absolute;
+    cursor: pointer;
+    opacity: .5;
+    display: block;
+  }
+
+  span {
+    @include rem(font-size, 20px);
+    @include rem(letter-spacing, -1px);
+    @include rem(padding, 20px, 0, 0);
+    @include rem(margin-bottom, 14px);
+    @include rem(line-height, 22px);
+    font-weight: 500;
+    display: block;
+  }
+
+  p {
+    @include rem(font-size, 14px);
+    @include rem(margin-top, 10px);
+    @include rem(margin, 0, 0, 9px);
+    @include rem(line-height, 24px);
+    font-weight: 500;
+  }
+
+  .content{
+    @include rem(min-height, 65px);
+  }
+
+  .notifyicon {
+    @include rem(font-size, 30px);
+    @include rem(top, -4px);
+    text-align: left;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .notifynumber {
+    @include rem(font-size, 25px);
+    width: 100%;
+    text-align: right;
+  }
+
+  footer {
+    position: relative;
+  }
+
+}

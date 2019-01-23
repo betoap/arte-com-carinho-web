@@ -1,0 +1,15 @@
+form footer {
+  display: block;
+  padding: 7px 14px 15px;
+  border-top: 1px solid rgba(0,0,0,.1);
+  background: rgba(248,248,248,.9);
+  min-height: 70px;
+  .btn {
+    float: right;
+    height: 31px;
+    margin: 10px 0 0 5px;
+    padding: 0 22px;
+    font: 300 15px/29px 'Open Sans',Helvetica,Arial,sans-serif;
+    cursor: pointer;
+  }
+}

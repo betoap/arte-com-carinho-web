@@ -1,0 +1,39 @@
+@import '../../../../../assets/styles/tools/_all';
+
+:host {
+  .header {
+    &__title {
+      color: rgba(0,0,0,0.9);
+      font-size: 16px;
+      letter-spacing: 0.3px;
+      line-height: 22px;
+    }
+
+    &__counter {
+      color: #EE162D;
+      font-size: 40px;
+      font-weight: 300;
+      letter-spacing: -1px;
+      line-height: 40px;
+    }
+  }
+
+  .content {
+    @include rem(min-height, 110px);
+
+    &__text {
+      color: $color-black-60;
+    }
+  }
+
+  .footer {
+
+    &__text {
+      color: $color-card-red;
+      @include rem(font-size, 16px);
+      @include rem(letter-spacing, 0.3px);
+      @include rem(line-height, 22px);
+    }
+  }
+
+}

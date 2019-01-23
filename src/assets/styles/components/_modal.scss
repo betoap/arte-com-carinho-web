@@ -1,0 +1,94 @@
+@import "../tools/_all";
+.modal {
+  /* This way it could be display flex or grid or whatever also. */
+  // width: 600px;
+  @include rem(border-radius, 3px);
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background-color: $color-black-50;
+}
+
+.modal-header {
+  @include rem(padding, 15px);
+  @include rem(min-height, 16.43px);
+  border-bottom: 1px solid #e5e5e5;
+
+  .modal-title {
+    line-height: 1.42857143;
+    opacity: 0.5;
+  }
+  h4 {
+    font-weight: 300;
+  }
+  .close {
+    @include rem(font-size, 19.5px);
+    @include rem(margin-top, 13px);
+    height: 18px;
+    width: 18px;
+    float: right;
+    font-weight: 700;
+    line-height: 1;
+    color: $color-black;
+    background: 0 0;
+    border: 0;
+    -webkit-appearance: none;
+    padding: 0;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    cursor: pointer;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+    }
+    img {
+      height: 18px;
+      width: 18px;
+    }
+  }
+}
+
+.modal-body {
+  @include rem(padding, 15px);
+
+  h2 {
+    @include rem(margin-top, 69px);
+    @include rem(margin-bottom, 62px);
+  }
+}
+
+.modal-footer {
+  @include rem(padding, 15px);
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+  .btn + .btn {
+    @include rem(margin-left, 5px);
+    @include rem(margin-bottom, 0px);
+  }
+}
+
+.steps {
+  .title {
+    h2 {
+      @include rem(font-size, 28px);
+      @include rem(line-height, 38px);
+      color: $color-black;
+      font-family: Roboto;
+      font-weight: lighter;
+    }
+  }
+}

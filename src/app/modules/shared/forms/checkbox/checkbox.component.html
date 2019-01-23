@@ -1,0 +1,9 @@
+<div class="answer-selector row">
+  <div class="boxcheck">
+    <input id="check{{identification}}" type="checkbox" name="check{{identification}}" value="true" [checked]="idx === 0" [value]="'Yes'" (change)="onSelectionChange(identification, labeltext)" />
+    <label class="label-image yes" for="check{{identification}}">
+    </label>
+  </div>
+  <label class="informationlabel">{{labeltext}}</label>
+</div>
+

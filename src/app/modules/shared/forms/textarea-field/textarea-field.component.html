@@ -1,0 +1,27 @@
+<div [ngClass]="classeCss">
+  <div [class]="setDefaultClass()" #txtArea>
+
+      <label [for]="id" [ngClass]="icon">{{label}}</label>
+
+      <textarea
+        [cols]="cols"
+        [disabled]="disabled"
+        [id]="id"
+        [attr.maxlength]="maxlength"
+        [name]="name"
+        [placeholder]="placeholder"
+        [readonly]="!!isReadOnly"
+        [required]="required"
+        [rows]="rows"
+        [value]="value"
+        [(ngModel)]="value"
+
+        (focus)="setFocus($event)"
+        (focusout)="unsetFocus($event)"
+        >
+      </textarea>
+
+      <acc-error-msg [control]="control" [label]="label"></acc-error-msg>
+
+  </div>
+</div>

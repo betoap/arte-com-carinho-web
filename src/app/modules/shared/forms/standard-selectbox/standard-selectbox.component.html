@@ -1,0 +1,41 @@
+<ng-container *ngIf="selectType === 'form'">
+  <div class="form-control">
+
+    <div class="fields" [ngClass]="classeCss">
+      <label class="fields__label {{classeCss}}__label" for="selec-box">{{label}}</label>
+
+      <!-- Fake select - clickable -->
+      <div class="{{classeCss}}__dropbox" (click)="onClick()">
+        <div class="fields__arrowIcon {{toggleIcon}}"></div>
+      </div>
+
+      <!-- Hidden select -->
+      <select class="fields__select {{classeCss}}__select form-control" name="" id="select-box">
+        <option class="fields__option {{classeCss}}__option"
+        *ngFor="let item of items; let id = index"
+        [value]="item.value"
+        [selected] = "id === setCurrent"
+        >
+          {{item.label}}
+        </option>
+      </select>
+
+      <!-- Custom options -->
+      <div class="{{classeCss}}__optionList" *ngIf="showDropDown">
+
+        <ul class="{{classeCss}}__optionList__ul">
+          <li class="{{classeCss}}__optionList__li"
+            (click)="onClickOption(item.value, id)"
+            *ngFor="let item of items; let id = index"
+            [value]="item.value"
+            >
+            {{item.label}}
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+</ng-container>

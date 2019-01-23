@@ -1,0 +1,193 @@
+@import './../../../../assets/styles/tools/_all';
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.teste {
+  @include rem(width, 300px);
+  @include rem(height, 300px);
+  position: relative;
+  background-color: brown;
+}
+
+:host {
+  .container-fluid {
+    height: 100%;
+  }
+  .row {
+    height: 100%;
+    .row {
+      height: auto;
+      @include rem(margin-bottom, 22px);
+    }
+  }
+}
+
+.box-write {
+  background-color: #fff;
+}
+
+.line-vetical {
+  border-right: 1px solid rgba(204, 204, 204, 1);
+}
+
+.box-1 {
+  background-color: #fff;
+  div[class$='-6'] {
+    span {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      @include rem(border-radius, 16px);
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 0.6rem;
+      padding: 0.5rem 0.8rem;
+    }
+  }
+  .client-data-installation {
+    @include rem(margin-bottom, 20px);
+    @include rem(padding-bottom, 54px);
+    border: solid rgba(0, 0, 0, 0.16);
+    border-width: 0 0 2px 0;
+    h3[class$='installation'] {
+      width: 23.5rem;
+      height: 2.33rem;
+      letter-spacing: 0.03rem;
+      line-height: 2.33;
+      margin-bottom: 0.17rem;
+      color: #ee162d;
+      @include rem(font-size, 24px);
+    }
+    .client-data__button-wrapper {
+      position: relative;
+      float: right;
+      top: -1.65rem;
+    }
+  }
+  .data {
+    margin: 25px 0;
+    @include rem(margin, 25px, 0);
+    @include rem(padding-bottom, 16px);
+    border: solid rgba(0, 0, 0, 0.16);
+    border-width: 0 0 1px 0;
+  }
+  .impediments {
+    a {
+      float: right;
+      cursor: pointer;
+    }
+    .impediments-invoice {
+      @include rem(padding-top, 20px);
+      h5 {
+        margin: 0px !important;
+      }
+      .invoice-title {
+        font-weight: 400;
+        color: #000000;
+        opacity: 0.6;
+      }
+      .invoice-value {
+        @include rem(padding-top, 6px);
+        font-size: 1.35rem;
+        font-weight: 400;
+      }
+    }
+    .impediments-agreement {
+      padding-top: 46.5px;
+      h5 {
+        margin: 0px !important;
+      }
+      .agreement-title {
+        font-weight: 400;
+        color: #000000;
+        opacity: 0.6;
+      }
+      .agreement-value {
+        @include rem(padding-top, 6px);
+        font-size: 1.35rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.box-2 {
+  background-color: rgba(246, 246, 246, 1);
+  input {
+    border: none;
+    background-color: transparent;
+  }
+  .selected-installation {
+    @include rem(padding-top, 15px);
+    @include rem(margin-bottom, 25px);
+    @include rem(padding-bottom, 20px);
+    border: solid rgba(0, 0, 0, 0.16);
+    border-width: 0 0 2px 0;
+    div[class$='numbers'] {
+      float: right;
+      @include rem(margin-top, -32px);
+      select {
+        @include rem(border-radius, 16px);
+        @include rem(padding, 3px);
+        @include rem(font-size, 11px);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding-left: 1rem;
+        padding-right: 2rem;
+        font-family: Roboto;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+    h3[class$='installation'] {
+      @include rem(letter-spacing, 0.3px);
+      @include rem(font-size, 24px);
+      margin-bottom: 0.17rem;
+      color: #ee162d;
+    }
+    label[class='protocol'] {
+      @include rem(font-size, 11px);
+      @include rem(letter-spacing, 1px);
+      @include rem(line-height, 24px);
+      color: rgba(0, 0, 0, 0.6);
+      font-family: Roboto;
+      font-weight: 400;
+      margin-right: 0.3rem;
+    }
+  }
+  .data {
+    @include rem(margin, 25px, 0);
+    @include rem(padding-bottom, 20px);
+    border: solid rgba(0, 0, 0, 0.16);
+    border-width: 0 0 1px 0;
+    div[class$='-24'] {
+      font-family: Roboto;
+      @include rem(line-height, 24px);
+      h4 {
+        text-transform: uppercase;
+      }
+      label {
+        @include rem(font-size, 12px);
+        @include rem(letter-spacing, 1px);
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.6);
+        text-transform: uppercase;
+      }
+      p {
+        @include rem(font-size, 16px);
+        font-weight: 600;
+        color: #f0951a;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .requests {
+    text-transform: uppercase;
+    h5 {
+      margin-left: 5rem;
+    }
+    a {
+      padding-right: 1rem;
+      cursor: pointer;
+    }
+  }
+}

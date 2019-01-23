@@ -1,0 +1,8 @@
+<div class="card {{ bgClass }}">
+  <div *ngIf="!disableHover"  class="card__hover animated {{ class }}" #hover>
+    <ng-content select="[hover]"></ng-content>
+  </div>
+  <div class="card__content noselect">
+    <ng-content select="[content]"></ng-content>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+<acc-form-debug [form]='form'></acc-form-debug>
+
+<!-- row -->
+<div class="row">
+
+  <!-- NEW WIDGET START -->
+  <article class="col-sm-12 col-md-12 col-lg-12">
+
+    <!-- Widget ID (each widget will need unique ID)-->
+    <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
+      <!-- widget options:
+      usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+      data-widget-colorbutton="false"
+      data-widget-editbutton="false"
+      data-widget-togglebutton="false"
+      data-widget-deletebutton="false"
+      data-widget-fullscreenbutton="false"
+      data-widget-custombutton="false"
+      data-widget-collapsed="true"
+      data-widget-sortable="false"
+
+      -->
+      <header>
+        <span class="widget-icon"> <i class="fa fa-check"></i> </span>
+        <h2>Fornecedor</h2>
+      </header>
+
+      <!-- widget div-->
+      <div>
+
+        <!-- widget content -->
+        <div class="widget-body">
+
+          <div class="row">
+            <form [formGroup]="form" (submit)='onSubmit()' class="form-edit" id="wizard-1" novalidate="novalidate">
+              <fieldset>
+                <div id="bootstrap-wizard-1" class="col-sm-12">
+                  <div class="form-bootstrapWizard">
+                    </div>
+                      <h3><strong>Cadastro</strong></h3>
+                      <div class="row">
+                          <div class="col-sm-12">
+                            <acc-input-field
+                              [id]="'input_name'"
+                              [label]="'Nome'"
+                              [type]="'text'"
+                              formControlName="nome"
+                              [control]="form.get('nome')"
+                              [placeholder]="'Nome Completo'"
+                              [restrictTo]="'letters'"
+                              [icon]="'fa fa-user fa-lg fa-fw'"
+                            ></acc-input-field>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-12">
+                            <div class="form-group">
+                              <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
+                                <input class="form-control input-lg" placeholder="email@address.com" type="text" name="email" id="email">
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-phone fa-lg fa-fw"></i></span>
+                              <input class="form-control input-lg" data-mask="+99 (999) 999-9999" data-mask-placeholder="X" placeholder="(11) 99999-9999" type="text" name="wphone" id="wphone">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-globe fa-lg fa-fw"></i></span>
+                              <input class="form-control input-lg" data-mask="www.fornecedor.com" data-mask-placeholder="X" placeholder="www.url.com.br" type="text" name="hphone" id="hphone">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+              </fieldset>
+              <footer>
+                <button type="submit" class="btn btn-primary">
+                  Validate Form
+                </button>
+              </footer>
+            </form>
+          </div>
+
+        </div>
+        <!-- end widget content -->
+
+      </div>
+      <!-- end widget div -->
+
+    </div>
+    <!-- end widget -->
+
+  </article>
+  <!-- WIDGET END -->
+
+</div>
+<!-- end row -->

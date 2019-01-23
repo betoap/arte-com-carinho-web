@@ -1,0 +1,11 @@
+<section class="carousel" #carousel>
+  <ng-content select="[header]"></ng-content>
+  <div class="content">
+    <ng-content select="[itens]"></ng-content>
+  </div>
+  <footer>
+    <ul>
+      <li *ngFor="let item of totalItens; index as i" (click)="changeStep(i)"></li>
+    </ul>
+  </footer>
+</section>
