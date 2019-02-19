@@ -18,7 +18,6 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit() {
     this.totalItens = [];
-    console.log( this.totalItens.length );
     setTimeout( () => this.parse(), 9 );
   }
 
@@ -48,7 +47,6 @@ export class CarouselComponent implements OnInit {
     const elementUl = this.bulletContainer;
     const elementsLi = elementUl.querySelectorAll( 'li' );
     elementsLi[id].classList.add('__active');
-    console.log(elementsLi[id]);
   }
 
   clearBullets( ) {

@@ -31,7 +31,7 @@ export abstract class BaseFormComponent {
     });
   }
 
-  resetar() {
+  clearForm() {
     this.form.reset();
   }
 
@@ -62,6 +62,5 @@ export abstract class BaseFormComponent {
       'has-feedback': this.checkValidTouched(field)
     };
   }
-
 
 }

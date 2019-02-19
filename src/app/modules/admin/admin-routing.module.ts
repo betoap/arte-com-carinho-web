@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
+  { path: '', loadChildren: './login/login.module#LoginModule' },
   { path: '', component: AdminComponent, children: [
     { path: 'home', loadChildren: './home/home.module#HomeModule' },
     { path: 'personalizado', loadChildren: './personalizado/personalizado.module#PersonalizadoModule' },

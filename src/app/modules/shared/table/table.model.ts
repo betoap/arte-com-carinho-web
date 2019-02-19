@@ -1,5 +1,4 @@
-export interface ITableModel {
-  headers: Array<string>;
-  filters?: Array<string>;
-  body: Array<object>;
+export interface ITable {
+  header: Array<string>;
+  data: Array<string>;
 }

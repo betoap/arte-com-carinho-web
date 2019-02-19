@@ -1,20 +1,42 @@
-@import '../../../../assets/styles/tools/__all';
-
-:host {
-
-  ::ng-deep {
-
-    .fields__content {
-      display: inline-block;
+@import './../../../../assets/styles/tools/_all';
+::ng-deep {
+  .dataTables_wrapper{
+    .dt-toolbar{
+      .toolbar{
+        .text-right{
+          img{
+            height: 40px;
+            margin-top: -4px;
+            margin-right: 22px
+          }
+        }
+      }
     }
-
+  }
+}
+:host {
+  .loading{
+    text-align: center;
+    margin-top: 70px;
   }
 
-  .custom-th {
-    width: 16%;
+  thead.actions{
+    th:last-child{
+        input{
+          display: none;
+        }
+        @include rem(width, 115px);
+    }
+    input.actions{
+      display: none;
+    }
   }
-
-  tr {
-    @include rem(height, 68px);
+  tbody{
+    tr{
+      cursor: pointer;
+      td{
+        vertical-align:middle !important;
+      }
+    }
   }
 }

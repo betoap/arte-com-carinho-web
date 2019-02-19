@@ -1,4 +1,8 @@
-<acc-form-debug [form]='form'></acc-form-debug>
+<!-- <img src="../../../../assets/img/paleta.png" /> -->
+<!-- MAIN CONTENT -->
+<div id="content">
+    <!-- widget grid -->
+    <section id="widget-grid" class="">
 
 <!-- row -->
 <div class="row">
@@ -7,7 +11,7 @@
   <article class="col-sm-12 col-md-12 col-lg-12">
 
     <!-- Widget ID (each widget will need unique ID)-->
-    <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
+    <div class="jarviswidget jarviswidget-color-pink" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
       <!-- widget options:
       usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
 
@@ -33,7 +37,7 @@
         <div class="widget-body">
 
           <div class="row">
-            <form [formGroup]="form" (submit)='onSubmit()' class="form-edit" id="wizard-1" novalidate="novalidate">
+            <form [formGroup]="form" *ngIf="form" (submit)='onSubmit()' class="form-edit" id="wizard-1" novalidate="novalidate">
               <fieldset>
                 <div id="bootstrap-wizard-1" class="col-sm-12">
                   <div class="form-bootstrapWizard">
@@ -42,45 +46,54 @@
                       <div class="row">
                           <div class="col-sm-12">
                             <acc-input-field
-                              [id]="'input_name'"
-                              [label]="'Nome'"
-                              [type]="'text'"
+                              id="input_name"
+                              label="Nome"
+                              type="text"
                               formControlName="nome"
                               [control]="form.get('nome')"
-                              [placeholder]="'Nome Completo'"
-                              [restrictTo]="'letters'"
-                              [icon]="'fa fa-user fa-lg fa-fw'"
+                              placeholder="Nome Completo"
+                              restrictTo="letters"
+                              icon="fa fa-user fa-lg fa-fw"
                             ></acc-input-field>
                           </div>
                       </div>
 
                       <div class="row">
                           <div class="col-sm-12">
-                            <div class="form-group">
-                              <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
-                                <input class="form-control input-lg" placeholder="email@address.com" type="text" name="email" id="email">
-                              </div>
-                            </div>
+                            <acc-input-field
+                              id="input_email"
+                              label="Email"
+                              type="text"
+                              formControlName="email"
+                              [control]="form.get('email')"
+                              placeholder="Email"
+                              icon="fa fa-envelope fa-lg fa-fw"
+                            ></acc-input-field>
                           </div>
                       </div>
 
                       <div class="row">
                         <div class="col-sm-6">
-                          <div class="form-group">
-                            <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-phone fa-lg fa-fw"></i></span>
-                              <input class="form-control input-lg" data-mask="+99 (999) 999-9999" data-mask-placeholder="X" placeholder="(11) 99999-9999" type="text" name="wphone" id="wphone">
-                            </div>
-                          </div>
+                          <acc-input-field
+                              id="input_telefone"
+                              label="Telefone"
+                              type="text"
+                              formControlName="telefone"
+                              [control]="form.get('telefone')"
+                              placeholder="(11) 99999-9999"
+                              icon="fa fa-phone fa-lg fa-fw"
+                            ></acc-input-field>
                         </div>
                         <div class="col-sm-6">
-                          <div class="form-group">
-                            <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-globe fa-lg fa-fw"></i></span>
-                              <input class="form-control input-lg" data-mask="www.fornecedor.com" data-mask-placeholder="X" placeholder="www.url.com.br" type="text" name="hphone" id="hphone">
-                            </div>
-                          </div>
+                          <acc-input-field
+                              id="input_site"
+                              label="Site"
+                              type="text"
+                              formControlName="site"
+                              [control]="form.get('site')"
+                              placeholder="www.address.com.br"
+                              icon="fa fa-globe fa-lg fa-fw"
+                            ></acc-input-field>
                         </div>
                       </div>
 
@@ -88,7 +101,7 @@
               </fieldset>
               <footer>
                 <button type="submit" class="btn btn-primary">
-                  Validate Form
+                  Enviar dados
                 </button>
               </footer>
             </form>
@@ -108,3 +121,6 @@
 
 </div>
 <!-- end row -->
+
+</section>
+</div>

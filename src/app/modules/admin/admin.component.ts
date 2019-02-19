@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
+declare var require: any;
 require('./../../../assets/js/admin.js');
 
 @Component({
@@ -9,7 +11,12 @@ require('./../../../assets/js/admin.js');
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly translate: TranslateService
+  ) {
+    /** Set language default **/
+    this.translate.setDefaultLang('pt-br');
+  }
 
   ngOnInit() {
   }

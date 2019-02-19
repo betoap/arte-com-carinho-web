@@ -1,0 +1,28 @@
+{
+  "APP" : {
+    "TITLE" : "ngx-traduzir demonstração",
+    "BODY" : "Funciona muito bem!"
+  },
+  "client": {
+  },
+  "installation": {
+    "installation": "Instalação",
+    "protocol": "Prot.",
+    "installation_data": "Dados da Instalação",
+    "situation": "Situação",
+    "address": "Endereço",
+    "location": "Local de Consumo",
+    "calculation_class": "Classe de Cálculo",
+    "ctg": "Ctg. Tar.",
+    "account_agreement": "Cat. Conta Contrato",
+    "cnae": "Cnae",
+    "requests": "Solicitações",
+    "load": "Carga",
+    "last_read": "Última leitura",
+    "all": "Todas",
+    "open": "Abertas"
+  },
+  "search": {
+    "search": "Busca"
+  }
+}

@@ -1,0 +1,28 @@
+<div
+  *ngFor="let notify of notifies"
+  class=" {{ notify.modal }} {{ notify.alignX }} {{ notify.alignY }} {{ notify.theme }}"
+  #notifies
+>
+<div id="divMiniIcons" class="">
+  <div
+    id="miniIcon{{ notify.id }}"
+    class="cajita animated fadeIn"
+  >
+    <i class="fa {{ notify.icon }} swing animated"></i>
+  </div>
+</div>
+<div id="divbigBoxes">
+  <div
+    id="bigBox{{ notify.id }}"
+    class="bigBox animated fadeIn fast"
+  >
+    <div id="bigBoxColor2">
+      <i class="botClose fa fa-times" id="botClose{{ notify.id }}" (click)="notifyClose()"  *ngIf="notify.canClose"></i>
+      <span *ngIf="notify.title">{{ notify.title }}</span>
+      <p [innerHTML]="notify.content"></p>
+      <div class="bigboxicon"><i class="fa {{ notify.icon }} swing animated"></i></div>
+      <!-- <div class="bigboxnumber">2</div> -->
+    </div>
+  </div>
+</div>
+</div>

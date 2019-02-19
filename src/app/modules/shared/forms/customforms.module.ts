@@ -36,6 +36,7 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
     RadioButtonComponent,
     StandardSelectboxComponent,
     TextareaFieldComponent
-  ]
+  ],
+  entryComponents: []
 })
 export class CustomFormsModule { }

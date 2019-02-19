@@ -86,21 +86,21 @@ export class DynamicComponentLoader {
   }
 
   appendComponentTo(component: any, to: Element, constructorObj?: any) {
-
     // Create a component reference from the component
     this._componentRef = this._componentFactoryResolver
       .resolveComponentFactory( component )
       .create(this.injector);
 
-    Object.keys( constructorObj ).forEach( constructorKey => {
-      Object.keys(this._componentRef.instance).forEach( key => {
-        if ( constructorKey === key ) {
-          this._componentRef.instance[ key ] = constructorObj[ constructorKey];
-        }
+    // if ( constructorObj ) {
+      Object.keys( constructorObj ).forEach( constructorKey => {
+        Object.keys(this._componentRef.instance).forEach( key => {
+          if ( constructorKey === key ) {
+            this._componentRef.instance[ key ] = constructorObj[ constructorKey];
+          }
+        });
       });
-    });
-
-    this._componentRef.instance.cmpRef = this._componentRef;
+      this._componentRef.instance.cmpRef = this._componentRef;
+    // }
 
     // Attach component to the appRef so that it's inside the ng component tree
     this._appRef.attachView( this._componentRef.hostView);
@@ -111,5 +111,6 @@ export class DynamicComponentLoader {
 
     // Append DOM element to the body
     to.appendChild(domElem);
+    return domElem;
   }
 }

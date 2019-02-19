@@ -1,7 +1,5 @@
 import { ActionReducerMap } from '@ngrx/store';
 
-
-
 // export interface SharedState {}
 
 

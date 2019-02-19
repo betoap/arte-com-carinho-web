@@ -6,7 +6,7 @@
       <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
         <img src="assets/img/avatars/acc.jpg" alt="me" class="online" />
         <span>
-          Nome
+          Dayana
         </span>
         <i class="fa fa-angle-down"></i>
       </a>
@@ -17,13 +17,27 @@
   <nav>
     <ul>
       <li routerLinkActive="active">
-        <a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Fonecedor</span></a>
+        <a [routerLink]="['/admin/home']" title="Home"><i class="fa fa-lg fa-fw fa-home"></i><span class="menu-item-parent"> Dashboard </span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-cube"></i> <span class="menu-item-parent"> Fonecedor </span></a>
         <ul>
           <li routerLinkActive="active">
-            <a [routerLink]="['/admin/fornecedor']" title="Fornecedo"><span class="menu-item-parent">Listar</span></a>
+            <a [routerLink]="['/admin/fornecedor']" title="Fornecedo"><i class="fa fa-lg fa-fw fa-table"></i><span class="menu-item-parent"> Listar </span></a>
           </li>
           <li routerLinkActive="active">
-            <a [routerLink]="['/admin/fornecedor/cadastro']" title="Fornecedo Cadastro"><span class="menu-item-parent">Adicionar</span></a>
+            <a [routerLink]="['/admin/fornecedor/cadastro']" title="Fornecedo Cadastro"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i><span class="menu-item-parent"> Adicionar </span></a>
+          </li>
+          <li>
+            <a href="#"> Produtos </a>
+            <ul>
+              <li routerLinkActive="active">
+                <a href="fa.html"><i class="fa fa-lg fa-fw fa-table"></i> Listar </a>
+              </li>
+              <li routerLinkActive="active">
+                <a href="glyph.html"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> Cadastrar </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </li>
@@ -38,22 +52,8 @@
             </li>
           </ul>
       </li>
-      <li routerLinkActive="active">
-          <a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-shopping-cart"></i> <span class="menu-item-parent">Vendas</span></a>
-          <ul>
-            <li>
-              <a href="index.html" title="Dashboard"><span class="menu-item-parent">adicionar</span></a>
-            </li>
-            <li class="">
-              <a href="dashboard-social.html" title="Dashboard"><span class="menu-item-parent">editar</span></a>
-            </li>
-          </ul>
-      </li>
-      <li routerLinkActive="active">
-        <a href="widgets.html"><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Widgets</span></a>
-      </li>
       <li routerLinkActive="active" class="chat-users top-menu-invisible">
-        <a href="#"><i class="fa fa-lg fa-fw fa-comment-o"><em class="bg-color-pink flash animated">!</em></i> <span class="menu-item-parent">Smart Chat API <sup>beta</sup></span></a>
+        <a href="#"><i class="fa fa-lg fa-fw fa-comment-o"><em class="bg-color-pink flash animated">!</em></i> <span class="menu-item-parent">Chat<sup>beta</sup></span></a>
         <ul>
           <li>
             <!-- DISPLAY USERS -->

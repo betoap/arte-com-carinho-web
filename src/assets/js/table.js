@@ -13,18 +13,15 @@ $(document).ready(function() {
 
 function START_DATATABLE() {
   /* BASIC ;*/
-  var responsiveHelper_dt_basic = undefined;
-  var responsiveHelper_datatable_fixed_column = undefined;
-  var responsiveHelper_datatable_col_reorder = undefined;
-  var responsiveHelper_datatable_tabletools = undefined;
+  let responsiveHelper_datatable_fixed_column = undefined;
 
-  var breakpointDefinition = {
+  let breakpointDefinition = {
     tablet : 1024,
     phone : 480
   };
 
   /* COLUMN FILTER  */
-  var otable = $('#datatable_fixed_column').DataTable({
+  let otable = $('#datatable_fixed_column').DataTable({
     //"bFilter": false,
     //"bInfo": false,
     //"bLengthChange": false

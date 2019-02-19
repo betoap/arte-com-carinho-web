@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '../../node_modules/@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { Store } from '@ngrx/store';
+
+import { AppState } from './modules/core/store/states/app.state';
+import { AppStarted } from './modules/core/store/actions/app.actions';
+
+/** I18N **/
+import { TranslateService } from '@ngx-translate/core';
+
 import { Usuario } from './usuario';
 import { Validacoes } from './validacoes';
 
@@ -14,10 +23,25 @@ export class AppComponent implements OnInit {
   formularioDeUsuario: FormGroup;
 
   // Via DI, nós obtemos o FormBuilder.
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private readonly translate: TranslateService,
+    private readonly store: Store<AppState>,
+    private fb: FormBuilder
+  ) {
+    /** Set language default **/
+    this.translate.setDefaultLang('pt-br');
+  }
 
   ngOnInit(): void {
-    this.criarFormularioDeUsuario();
+    /** Start project **/
+    this.store.dispatch( new AppStarted() );
+
+    /** Listen language */
+    this.store.select('languages').subscribe( language => {
+      this.translate.use( language.language );
+    });
+
+    // this.criarFormularioDeUsuario();
   }
 
   enviarDados() {

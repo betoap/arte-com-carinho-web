@@ -1,0 +1,14 @@
+::ng-deep {
+  .logo{
+    margin-top: 0;
+    margin-left: 9px;
+    width: 175px;
+    height: 39px;
+    display: inline-block;
+    float: left;
+    &>img{
+      width: auto;
+      height: 50px;
+    }
+  }
+}

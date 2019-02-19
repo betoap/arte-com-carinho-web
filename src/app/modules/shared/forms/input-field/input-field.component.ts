@@ -89,7 +89,7 @@ export class InputFieldComponent implements ControlValueAccessor {
   }
 
   AfterViewChecked() {
-    console.log( this );
+    // console.log( this );
   }
 
 }

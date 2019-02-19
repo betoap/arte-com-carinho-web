@@ -1,0 +1,31 @@
+.margin-50{
+  margin-top: 50px;
+}
+#logo{
+  width: auto;
+}
+form{
+  background: white;
+}
+#logo-group {
+  &>span{
+    font-family: Helvetica Neue;
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 5px;
+    color: #784e36;
+    strong{
+      color: #572f19;
+    }
+    img{
+      height: 50px;
+      width: auto;
+    }
+  }
+}
+#extr-page-header-space{
+  margin-top: -18px;
+  img{
+    height: 60px;
+  }
+}

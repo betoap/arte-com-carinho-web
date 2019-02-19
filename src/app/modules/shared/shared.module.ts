@@ -1,8 +1,6 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { DataTableModule } from 'angular-6-datatable';
 import { CustomSelectboxComponent } from './forms/custom-selectbox/custom-selectbox.component';
 
 // ngrx
@@ -14,7 +12,6 @@ import { CustomFormsModule } from './forms/customforms.module';
 /** I18N **/
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
-import { createTranslateLoader } from './utils/translate';
 import { CommonModule } from '@angular/common';
 
 // components
@@ -23,24 +20,22 @@ import { TableComponent } from './table/table.component';
 import { ListComponent } from './list-component/list-component.component';
 import { CardContentComponent } from './card/card-content/card-content.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { NotifyComponent } from './notify/notify.component';
+import { LoadingComponent } from './loading/loading.component';
+import { DynamicComponentLoaderModule } from './../core/dynamic-component-loader/dynamic-component-loader.module';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    DataTableModule,
     CustomFormsModule,
+    DynamicComponentLoaderModule.forChild([
+      LoadingComponent,
+      ModalComponent,
+    ]),
     // StoreModule.forFeature( 'shared', SharedReducers ),
     // EffectsModule.forFeature( SharedEffects ),
-
-    TranslateModule.forRoot({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: (createTranslateLoader),
-          deps: [HttpClient]
-      },
-      isolate: true
-    })
   ],
   declarations: [
     CardComponent,
@@ -48,7 +43,10 @@ import { CarouselComponent } from './carousel/carousel.component';
     ListComponent,
     CustomSelectboxComponent,
     CardContentComponent,
-    CarouselComponent
+    CarouselComponent,
+    NotifyComponent,
+    LoadingComponent,
+    ModalComponent,
   ],
   exports: [
     CustomFormsModule,
@@ -58,10 +56,16 @@ import { CarouselComponent } from './carousel/carousel.component';
     CustomSelectboxComponent,
     CardContentComponent,
     CarouselComponent,
+    NotifyComponent,
+    LoadingComponent,
+    ModalComponent,
   ],
   entryComponents: [
     CardComponent,
-    CarouselComponent
+    CarouselComponent,
+    NotifyComponent,
+    LoadingComponent,
+    ModalComponent,
   ],
 })
 export class SharedModule { }
